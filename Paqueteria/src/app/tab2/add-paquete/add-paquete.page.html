@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Crear nuevo paquete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Nombre Paquete" type="text" #nombrePaquete></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Seleccione el repartidor" #repartidor>
+        <ion-select-option value="Pepito">Pepito</ion-select-option>
+        <ion-select-option value="Asclepio">Asclepio</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Estado del Paquete" type="text" #estado></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Url de la Imagen" type="text" #ImgURL></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button id="open-toast" (click)="saveNewPaquete(nombrePaquete,repartidor,estado,ImgURL);">Guardar</ion-button>
+      <ion-toast trigger="open-toast" message="Paquete agregado exitosamente" [duration]="3000" ></ion-toast>
+    </ion-item>
+    <ion-button horizontal = "end" size="small" (click)="goPaquetes();" color="primary">
+      Volver
+     </ion-button>
+  </ion-list>
+</ion-content>

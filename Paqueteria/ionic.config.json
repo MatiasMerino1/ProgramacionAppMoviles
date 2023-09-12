@@ -1,0 +1,7 @@
+{
+  "name": "Paqueteria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

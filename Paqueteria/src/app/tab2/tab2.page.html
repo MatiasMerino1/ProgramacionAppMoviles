@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Paquetes a Repartir
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-item *ngFor = "let p of paquetes">
+    <ion-avatar slot="start">
+      <ion-img [src]="p.ImgURL" [routerLink] = "['/paquetes',p.id]"></ion-img>
+    </ion-avatar>
+    <ion-label>{{p.nombrePaquete}}</ion-label>
+  </ion-item>
+</ion-list>
+<ion-item>
+  <ion-button [routerLink]="['./add-paquete']">Crear Paquete</ion-button>
+</ion-item>
+
+<ion-button horizontal = "end" size="small" (click)="goHome();" color="primary">
+  Volver
+ </ion-button>
+</ion-content>

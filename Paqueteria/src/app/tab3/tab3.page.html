@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Repartidores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Acá podrás visualizar los perfiles de los repartidores</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card *ngFor="let r of repartidores" style="max-width: fit-content;">
+    <ion-card-title>
+      {{r.nombre}}
+    </ion-card-title>
+    <ion-img [src]="r.ImgURL" style="height:300px; width: 300px;"></ion-img>
+    <ion-button [routerLink]="['/repartidores',r.id]">Ver perfil</ion-button>
+  </ion-card>
+  <ion-button horizontal = "end" size="small" (click)="goHome();" color="primary">
+    Volver
+   </ion-button>
+</ion-content>

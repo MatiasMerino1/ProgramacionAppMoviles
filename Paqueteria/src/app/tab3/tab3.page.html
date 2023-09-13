@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Repartidores
+      <ion-button horizontal = "end" size="small" (click)="goHome();" color="primary">
+        Home
+      </ion-button> Repartidores
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +21,5 @@
     <ion-img [src]="r.ImgURL" style="height:300px; width: 300px;"></ion-img>
     <ion-button [routerLink]="['/repartidores',r.id]">Ver perfil</ion-button>
   </ion-card>
-  <ion-button horizontal = "end" size="small" (click)="goHome();" color="primary">
-    Volver
-   </ion-button>
+
 </ion-content>

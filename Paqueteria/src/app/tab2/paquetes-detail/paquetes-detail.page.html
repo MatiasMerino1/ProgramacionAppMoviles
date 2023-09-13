@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Id Paquete: {{paquetes.id}}</ion-title>
+    <ion-title>
+      <ion-button horizontal = "end" size="small" (click)="goHome();" color="primary">
+        Home
+      </ion-button> Id Paquete: {{paquetes.id}}</ion-title>
 
   </ion-toolbar>
 </ion-header>
@@ -14,7 +17,8 @@
     <ion-item>Estado del Paquete: {{paquetes.estado}}</ion-item>
     <ion-img [src]="paquetes.ImgURL" style="width: 300px; height: 300px;"></ion-img>
   </ion-list>
+
   <ion-button horizontal = "end" size="small" (click)="goPaquetes();" color="primary">
     Volver
-   </ion-button>
+  </ion-button>
 </ion-content>

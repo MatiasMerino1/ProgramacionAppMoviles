@@ -16,7 +16,11 @@
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Estado del Paquete" type="text" #estado></ion-input>
+      <ion-select placeholder="Por repartir" label="Seleccione el repartidor" #estado>
+        <ion-select-option value="Por repartir">Por repartir</ion-select-option>
+        <ion-select-option value="En camino">En camino</ion-select-option>
+        <ion-select-option value="Despachado">Despachado</ion-select-option>
+      </ion-select>
     </ion-item>
     <ion-item>
       <ion-input placeholder="Url de la Imagen" type="text" #ImgURL></ion-input>

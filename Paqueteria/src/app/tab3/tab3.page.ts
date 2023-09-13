@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RepartidoresService } from './repartidores.service';
-import { Repartidor } from './repartidores.model';
+import { Paquete, Repartidor } from './repartidores.model';
 import { Router } from '@angular/router';
+import { PaquetesService } from '../tab2/paquetes.service';
 
 @Component({
   selector: 'app-tab3',
@@ -10,10 +11,12 @@ import { Router } from '@angular/router';
 })
 export class Tab3Page {
   repartidores!:Repartidor[];
-  constructor(private repartidoresService: RepartidoresService, private router:Router) {}
+  paquetes!:Paquete[];
+  constructor(private repartidoresService: RepartidoresService, private router:Router ,private paquetesService:PaquetesService) {}
 
   ngOnInit() {
     this.repartidores = this.repartidoresService.getAllRepartidores();
+    this.paquetes = this.paquetesService.getAllPaquetes();
   }
   goRepartidores (){
     this.router.navigate(['/repartidores']);

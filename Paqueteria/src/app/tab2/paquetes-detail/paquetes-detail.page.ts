@@ -19,6 +19,11 @@ export class PaquetesDetailPage implements OnInit {
       //console.log(this.paquetes);
     })
   }
+
+  goHome (){
+    this.router.navigate(['']);
+    //console.log("Funciona pulento")
+  }
   //Función para volver a la página de paquetes
   goPaquetes (){
     this.router.navigate(['/paquetes']);
